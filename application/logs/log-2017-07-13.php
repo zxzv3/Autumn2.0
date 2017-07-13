@@ -32,3 +32,13 @@ ERROR - 2017-07-13 17:34:32 --> Severity: Warning --> mysqli::real_connect(): (H
 ERROR - 2017-07-13 17:34:32 --> Unable to connect to the database
 ERROR - 2017-07-13 17:34:37 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: YES) F:\xampp\htdocs\Autumn2.0\application\system\database\drivers\mysqli\mysqli_driver.php 201
 ERROR - 2017-07-13 17:34:37 --> Unable to connect to the database
+ERROR - 2017-07-13 18:04:27 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:04:41 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:04:42 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:04:43 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:04:44 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:04:59 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:05:03 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:05:20 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:05:23 --> 404 Page Not Found: Admin_user/login
+ERROR - 2017-07-13 18:05:31 --> 404 Page Not Found: Admin_user/login

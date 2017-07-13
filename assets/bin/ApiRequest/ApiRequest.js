@@ -25,7 +25,7 @@ var ApiRequest = (function(ApiRequestList){
 			apiName : "api-name",
 			apiParamName : "api-param-name",
 			apiEvent : "api-event",
-			eventApiName : "event-api-name"
+			eventApiName : "api-event-name"
 		},
 		event : {
 			click : "clickSubmit"
@@ -362,6 +362,7 @@ var ApiRequest = (function(ApiRequestList){
 
 	var uriGet = function(apiList , uri){
 		var temp = apiList;
+		console.log(uri)
 		var uri = uri.split('/');
 		for(value in uri){
 			if(typeof temp[uri[value]] == 'undefined'){
