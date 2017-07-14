@@ -34,7 +34,11 @@ class Autumn{
 
 
 	static public function params($name , $type){
-		$params = self::$CI->config->item('params')[$type];
+		$params = self::$CI->config->item('params');
+		if( ! isset($params[$type])) return false;
+		$params = $params[$type];
+
+
 		$GET = isset($params["{$name}:GET"]) ? $params["{$name}:GET"] : array();
 		$POST = isset($params["{$name}:POST"]) ? $params["{$name}:POST"] : array();
 		$params = array_merge($GET , $POST);

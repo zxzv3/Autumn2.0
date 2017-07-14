@@ -35,7 +35,6 @@ var ApiRequest = (function(ApiRequestList){
 
 
 
-
 	var modules = function(ApiRequestList , option){
 		ApiRequestData.ApiRequestList = ApiRequestList;
 		ApiRequestData.option = option;
@@ -48,20 +47,20 @@ var ApiRequest = (function(ApiRequestList){
 			return c;  
 		})();  
 
-		if(isset(option) && isset(option.event) && option.event){
+		if(isset(ApiRequestData.option) && isset(ApiRequestData.option.event) && ApiRequestData.option.event){
 			$(replace("[$='$']" , [config.name.apiEvent , config.event.click])).each(function(key , value){
 				$(value).click(function(){
-					isset(option) && isset(option.start) ? option.start($(value).attr(config.name.eventApiName)) : '';
+					isset(ApiRequestData.option) && isset(ApiRequestData.option.start) ? ApiRequestData.option.start($(value).attr(config.name.eventApiName)) : '';
 
-					$api_element = $(this).parents(replace("[$='$']" , [config.name.apiName , $(value).attr(config.name.eventApiName)]));
+					$api_element = $(this).parents(replace("[$]" , [config.name.apiName]));
 
 
-					ApiRequest.push($(value).attr(config.name.eventApiName) , {
+					ApiRequest.push($api_element.attr(config.name.apiName) , {
 						target : $api_element
 					}).then(function(data){
-						isset(option) && isset(option.success) ? option.success($(value).attr(config.name.eventApiName) , data) : ''
+						isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success($api_element.attr(config.name.apiName) , data) : ''
 					} , function(data){
-						isset(option) && isset(option.error) ? option.error($(value).attr(config.name.eventApiName) , data) : ''
+						isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error($api_element.attr(config.name.apiName) , data) : ''
 					});
 				})
 			})
@@ -69,9 +68,16 @@ var ApiRequest = (function(ApiRequestList){
 	}
 
 
+	modules.prototype.set = function(fun){
+		ApiRequestData.option.error = fun.error;
+		ApiRequestData.option.success = fun.success;
+	}
+
+	
 
 	modules.prototype.push = function(apiName , option){
 		time.handleTime = time.getTime();
+		ApiRequestData.apiName = apiName;
 
 
 		if( ! isset(option)) option = {};
@@ -147,6 +153,16 @@ var ApiRequest = (function(ApiRequestList){
 			timeOut :isset(option) && isset(option.timeOut) ? api.timeOut : 5000,
 			promise: promise
 		});
+
+
+
+
+		promise.then(function(data){
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(apiName , data) : ''
+		} , function(data){
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error(apiName , data) : ''
+
+		})
 		return promise;
 	}
 
@@ -188,7 +204,7 @@ var ApiRequest = (function(ApiRequestList){
 				if(data.state){
 					options.promise.resolve(data);
 				}else{
-					if(isset(data.message)){
+					if( ! isset(data.message)){
 						options.promise.reject({
 							message : "请求出现异常，接口服务器尚未反馈错误信息，请稍候再试！",
 							info : ApiInfo
@@ -294,14 +310,20 @@ var ApiRequest = (function(ApiRequestList){
 		};
 		var error = [];
 
+
 		$.each(params , function(key , param){
 			if(key == 'uriGet') return;
 			var thisRule = rule[key];
+			if( ! isset(thisRule)) return false;
+			if( ! isset(thisRule['name'])){
+				thisRule.name = key;
+			}
+
 			var param = params[key];
 			var thisName = toastText.header + thisRule.name;
 			var message = '';
 			var length = param.length;
-			if( ! isset(thisRule) || ! isset(thisRule['name'])) return false;
+
 
 			if(isset(thisRule.is_null) && thisRule.is_null == false && length == 0){
 				error.push({message : thisName + toastText.rule.nullText , data : thisRule.other});
@@ -326,11 +348,16 @@ var ApiRequest = (function(ApiRequestList){
 	 * @param  {[type]} code    [description]
 	 */
 	var reslut = function(static , message , data){
+		var returnParams = {
+			message : message,
+			data : data
+		};
+		if(static){
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(ApiRequestData.apiName , returnParams) : ''
+		}else{
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error(ApiRequestData.apiName , returnParams) : ''
+		}
 		then = function(success , error){
-			var returnParams = {
-				message : message,
-				data : data
-			};
 			if(static){
 				if(typeof success == 'function') success(returnParams);
 			}else{
@@ -362,7 +389,6 @@ var ApiRequest = (function(ApiRequestList){
 
 	var uriGet = function(apiList , uri){
 		var temp = apiList;
-		console.log(uri)
 		var uri = uri.split('/');
 		for(value in uri){
 			if(typeof temp[uri[value]] == 'undefined'){

@@ -11,5 +11,9 @@ $config['autumn'] = array(
 	'template' => array(
 		'admin_template' => 'admin' ,
 		'home_template' => 'home' ,
-	)
+	),
+
+	'base_url' => 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER["SCRIPT_NAME"]
 );
+
+

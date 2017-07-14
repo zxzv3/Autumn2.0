@@ -2,6 +2,8 @@
 
 define('ADMINDIR', 'Admin');
 define('HOMEDIR', 'Home');
+ini_set('date.timezone','Asia/Shanghai');
+date_default_timezone_set("PRC"); 
 
 /**
  * CodeIgniter

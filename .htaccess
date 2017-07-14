@@ -1,4 +1,4 @@
 RewriteEngine on
 
-RewriteCond $1 !^(api.md|Transcode.php|index\.php|application|mywebsql|assets|favicon\.ico)
+RewriteCond $1 !^(api.md|bom.php|index\.php|application|mywebsql|assets|favicon\.ico)
 RewriteRule ^(.*)$ ./index.php/$1 [L]
