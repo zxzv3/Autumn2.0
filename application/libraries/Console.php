@@ -6,6 +6,5 @@ class Console{
 	}
 
 	static public function log(){
-		
 	}
 }

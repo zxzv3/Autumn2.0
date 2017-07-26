@@ -1,9 +1,13 @@
 <?php
 
-define('ADMINDIR', 'Admin');
-define('HOMEDIR', 'Home');
+define('ADMINDIR', 'admin');
+define('HOMEDIR', 'home');
+define('ADMIN_TEMPLATE', 'admin');
+define('HOME_TEMPLATE', 'home');
+
+
 ini_set('date.timezone','Asia/Shanghai');
-date_default_timezone_set("PRC"); 
+date_default_timezone_set("PRC");
 
 /**
  * CodeIgniter

@@ -416,7 +416,7 @@ if ( ! is_php('5.4'))
 		}
 		elseif (method_exists($class, '_remap'))
 		{
-			$params = array($method, array_slice($URI->rsegments, 2));
+			$params = array(strtolower($method), array_slice($URI->rsegments, 2));
 			$method = '_remap';
 		}
 		elseif ( ! method_exists($class, $method))

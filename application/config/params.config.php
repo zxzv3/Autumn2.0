@@ -1,16 +1,15 @@
 <?php
-$admin_dir = ADMINDIR;
-$home_dir = HOMEDIR;
-
-
 
 $config['params'] = array(
 
-	"Api/Admin" => array(
+	"api/admin" => array(
 		"Admin_user/login:POST" => array(
 			'username' => array('min' => 6 , 'max' => 16 , 'name' => '用户名'),
 			'password' => array('min' => 6 , 'max' => 16 , 'name' => '密码'),
 		),
+
+
+		
 
 
 		"Live/edit:POST" => array(

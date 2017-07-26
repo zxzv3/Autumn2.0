@@ -10,11 +10,36 @@ var popup = new popupWidget();
 var dom = new Dom();
 
 
-$("#js-live-create").click(function(){
-	popup.sure({
-		title : '创建直播',
-		content : dom.get('live-create')
-	}).then(function(){
-		ApiRequest.push('Live/Create')
-	})
+$(document).on('click', ".widget-checkbox", function(event) {
+	$(this).toggleClass('active');
+});
+
+
+$('select').each(function(key , value){
+	var selectValue = $(value).attr('value');
+	$(value).find('option[value="' + selectValue + '"]').attr('selected' , true)
+});
+
+
+if(ApiRequestSuccess != 'typeof'){
+	function ApiRequestSuccess(name , data){
+		popup.toast('恭喜您！操作成功，页面稍后将会自动刷新更新数据');
+		ApiRequest.success();
+	}
+}
+
+if(ApiRequestError != 'typeof'){
+	function ApiRequestError(data , error){
+		if(isset(data.data) && data.data.length > 0 && data.data != {}){
+			popup.inputToast(data.message , data.data[0].data)
+		}else{
+			popup.toast(data.message)
+		}
+	}
+}
+
+
+ApiRequest.set({
+	success : ApiRequestSuccess,
+	error : ApiRequestError,
 })

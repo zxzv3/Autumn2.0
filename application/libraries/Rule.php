@@ -96,10 +96,7 @@ class Rule{
 	 * @return [type]        [description]
 	 */
 	private static function _reslutFormat($text , $other = array()){
-		self::$reslut = array(
-			"text" => $text . self::$toast_message['footer'], 
-			"other" => isset($other) ? $other : array()
-		);
+		self::$reslut = $text . self::$toast_message['footer'];
 	}
 
 

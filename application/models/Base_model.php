@@ -3,6 +3,7 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class Base_model extends CI_Model {
 	public function __construct() {
 	    parent::__construct();
+	    $this->load->database();
 	}
 
 	public function get_like($where = array() , $link = array() , $select = array(), $page = 1, $count = 10){

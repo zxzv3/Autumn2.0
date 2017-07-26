@@ -2,13 +2,13 @@
 </head>
 <body>
 	
-	<img src="./assets/images/500460213.jpg" height="100%">
+	<img src="./assets/images/500460213.jpg" width="100%" height="100%">
 	<div class="login">
 		<div class="left" style="padding-top:26px;">
-			<!-- <h1>autumn</h1>
-			<span>Autumn to the flowers laugh birds</span> -->
-			<img src="./assets/images/logo.png" width="80%" alt=""><br>
-			<span>视频连接世界</span>
+			<h1>Autumn</h1>
+			<span>Autumn to the flowers laugh birds</span>
+			<!-- <img src="./assets/images/logo.png" width="80%" alt=""><br> -->
+			<!-- <span>视频连接世界</span> -->
 		</div>
 
 
@@ -27,7 +27,7 @@
 	</div>
 
 
-	<?php $this->load->view($template['admin_template'] . '\template\footer')?>
+	<?php $this->load->view(ADMIN_TEMPLATE . '/template/footer')?>
 	<script type="text/javascript">
 		function ApiRequestSuccess(name , data){
 			if(name == 'Admin_user/Login'){
