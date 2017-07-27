@@ -26,9 +26,9 @@
 		<div class="song">
 			<ul>
 				<li><a href="./<?=ADMINDIR?>/admin_user/lists"><i class="fa fa-list"></i> 管理列表</a></li>
-				<li><a href="./<?=ADMINDIR?>/admin_user/groups"><i class="fa fa-folder-o"></i> 权组管理</a></li>
+				<li><a href="./<?=ADMINDIR?>/admin_user/groups"><i class="fa fa-folder-o"></i> 管理角色</a></li>
 				<li><a href="./<?=ADMINDIR?>/user/lists"><i class="fa fa-user-o"></i> 用户列表</a></li>
-				<li><a href="./<?=ADMINDIR?>/user/groups"><i class="fa fa-user-circle-o"></i> 用户权组</a></li>
+				<li><a href="./<?=ADMINDIR?>/user/groups"><i class="fa fa-user-circle-o"></i> 用户角色</a></li>
 				<li><a href="./<?=ADMINDIR?>/user/setting"><i class="fa fa-cogs"></i> 用户设置</a></li>
 			</ul>
 		</div>
@@ -44,8 +44,7 @@
 
 		<div class="song">
 			<ul>
-				<li><a href="./<?=ADMINDIR?>/class/lists"><i class="fa fa-comments"></i> 消息通知</a></li>
-				<li><a href="./<?=ADMINDIR?>/class/lists"><i class="fa fa-comments"></i> 私信管理</a></li>
+				<li><a href="./<?=ADMINDIR?>/notice/lists"><i class="fa fa-comments"></i> 消息通知</a></li>
 				<li><a href="./<?=ADMINDIR?>/article/lists"><i class="fa fa-file-text-o"></i> 文章列表</a></li>
 				<li><a href="./<?=ADMINDIR?>/class/lists"><i class="fa fa-navicon"></i> 栏目管理</a></li>
 			</ul>
