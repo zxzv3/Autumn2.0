@@ -21,20 +21,22 @@ $('select').each(function(key , value){
 });
 
 
-if(ApiRequestSuccess != 'typeof'){
+if(typeof ApiRequestSuccess == 'undefined'){
 	function ApiRequestSuccess(name , data){
 		popup.toast('恭喜您！操作成功，页面稍后将会自动刷新更新数据');
 		ApiRequest.success();
 	}
 }
 
-if(ApiRequestError != 'typeof'){
-	function ApiRequestError(data , error){
-		if(isset(data.data) && data.data.length > 0 && data.data != {}){
-			popup.inputToast(data.message , data.data[0].data)
-		}else{
-			popup.toast(data.message)
-		}
+
+if(typeof ApiRequestError == 'undefined'){
+	function ApiRequestError(name , error){
+		popup.toast(error.message)
+		// console.log(error)
+		// if(isset(data.data) && data.data.length > 0 && data.data != {}){
+		// 	popup.inputToast(data.message , data.data[0].data)
+		// }else{
+		// }
 	}
 }
 

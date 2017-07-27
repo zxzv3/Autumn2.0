@@ -86,7 +86,6 @@ var ApiRequest = (function(ApiRequestList){
 
 
 
-
 		// 去获取页面内表单的数据
 		var from_data = this.getApiFrom(apiName , option);
 		if(from_data != false){
@@ -157,9 +156,10 @@ var ApiRequest = (function(ApiRequestList){
 
 
 		promise.then(function(data){
-			(isset(option) &&  ! isset(option.success)) && isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(apiName , data) : ''
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(apiName , data) : ''
 		} , function(data){
-			(isset(option) &&  ! isset(option.error)) && isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error(apiName , data) : ''
+			console.log(data)
+			isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error(apiName , data) : ''
 
 		})
 		return promise;
@@ -351,6 +351,7 @@ var ApiRequest = (function(ApiRequestList){
 			message : message,
 			data : data
 		};
+
 		if(static){
 			isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(ApiRequestData.apiName , returnParams) : ''
 		}else{

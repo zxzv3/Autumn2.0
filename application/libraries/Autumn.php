@@ -59,6 +59,7 @@ class Autumn{
 			if( ! isset($params_value)) self::end(false , '您输入的参数不完全，请检查您输入的数据');
 
 			$return_params->$name = ! is_numeric($key) & $value == false ? $params_value : @htmlspecialchars($params_value);
+			$return_params->$name = htmlspecialchars($return_params->$name);
 		}
 
 

@@ -38,6 +38,10 @@ class User extends CI_Controller {
 	}
 
 
+	/**
+	 * 删除用户
+	 * @return [type] [description]
+	 */
 	public function remove(){
 		$this->load->model('User_model');
 		$this->load->model('User_group_model');
@@ -81,7 +85,10 @@ class User extends CI_Controller {
 
 
 
-
+	/**
+	 * 创建一个新的用户
+	 * @return [type] [description]
+	 */
 	public function create(){
 		$this->load->model('User_model');
 		$this->load->model('User_group_model');

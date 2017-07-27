@@ -68,6 +68,9 @@ class User_setting extends CI_Controller {
 				'from_group' => $this->params->from_group , 
 				'name' => $this->params->name
 			))){
+				Autumn::end(false , '您设置的配置项名称已重复');
+			}
+			if($this->User_setting_model->is_exist(array('name_key' => $this->params->name_key))){
 				Autumn::end(false , '您设置的调用名称已经重复');
 			}
 		}else{
@@ -75,6 +78,10 @@ class User_setting extends CI_Controller {
 			// 如果没有设置关联权限组则直接检查是重名
 			if($this->User_setting_model->is_exist(array('name' => $this->params->name))){
 				Autumn::end(false , '您设置的调用名称已经重复');
+			}
+
+			if($this->User_setting_model->is_exist(array('name_key' => $this->params->name_key))){
+				Autumn::end(false , '您设置的配置项名称已重复');
 			}
 		}
 
