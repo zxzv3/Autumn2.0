@@ -21,6 +21,8 @@ var popupWidget = (function(){
 	_self.close = function(){
 		$thisSure.find('.popup-sure').removeClass('in');
 		$thisSure.find('.popup-sure').addClass('close');
+
+
 		setTimeout(function(){
 			$thisSure.fadeOut(200)
 		} , 100)

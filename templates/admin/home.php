@@ -30,7 +30,7 @@
 		<div class="box">
 			<h1>详细数据</h1>
 			<?php
-				include './tz.php';
+				include './public/tz.php';
 			?>
 		</div>
 		

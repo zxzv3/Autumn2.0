@@ -18,8 +18,8 @@ class Notice extends CI_Controller {
 			"{$this->name}/edit:POST" => array(
 				'id' => array('max' => 10 , 'min' => 1 , 'name' => 'id'),
 				'title' => array('max' => 50 , 'min' => 2 , 'name' => '消息标题'),
-				'from_user' => array('max' => 16 , 'min' => 1 , 'name' => '所属用户'),
 			),
+
 			"{$this->name}/create:POST" => array(
 				'title' => array('max' => 50 , 'min' => 2 , 'name' => '消息标题'),
 				'type' => array('max' => 21 , 'min' => 2 , 'name' => '类型'),
@@ -67,7 +67,7 @@ class Notice extends CI_Controller {
 		if(strlen(strip_tags($content)) > 5000) Autumn::end(false , '文章内容大于5000字');
 		if(strlen(strip_tags($content)) < 3) Autumn::end(false , '文章内容少于2个字');
 
-		if($type == 'lettr'){
+		if($type == 'letter'){
 			if( ! $this->User_model->is_exist(array('id' => $this->params->from_user))){
 				Autumn::end(false , '对应的用户ID不存在');
 			}
@@ -119,14 +119,14 @@ class Notice extends CI_Controller {
 		if(strlen(strip_tags($content)) > 5000) Autumn::end(false , '文章内容大于5000字');
 		if(strlen(strip_tags($content)) < 3) Autumn::end(false , '文章内容少于2个字');
 
-		if($type == 'lettr'){
+		if($type == 'letter'){
 			if( ! $this->User_model->is_exist(array('id' => $this->params->from_user))){
 				Autumn::end(false , '对应的用户ID不存在');
 			}
 		}else{
 			$this->params->from_user = -1;
 		}
-		$this->Notice_model->edit(array() , array(
+		$this->Notice_model->edit(array('id' => $Notice_data['id']) , array(
 			'title' => $this->params->title,
 			'content' => $content,
 			'from_user' => $this->params->from_user,

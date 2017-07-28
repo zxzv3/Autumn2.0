@@ -35,7 +35,9 @@ class Lists extends CI_Controller {
 				$value['from_user'] = '<span class="label fezocms">' . $User_data['username'] . '</span>';
 			}
 
-			$value['content'] = mb_substr(strip_tags(htmlspecialchars_decode($value['content'])), 0 , 40) . '.....';
+
+			$value['title'] = strip_tags(htmlspecialchars_decode($value['title']));
+			$value['content'] = mb_substr(strip_tags(htmlspecialchars_decode($value['content'])), 0 , 25) . '.....';
 		}
 		Loader::view(array('notice/lists') , array(
 			'Notice_list' => $Notice_list,

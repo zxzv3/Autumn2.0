@@ -1,3 +1,7 @@
+#Umediter{
+    color:#555;
+    width:100%!important;
+}
 .edui-container{
     position: relative;
     border: 1px solid #eee;
@@ -13,6 +17,7 @@
 .edui-toolbar .edui-btn-toolbar{
     position: relative;
     padding: 5px;
+    border-bottom:1px solid #eee;
 }
 .edui-container .edui-editor-body{
     background-color: #fff;
@@ -25,11 +30,12 @@
     border:0;
     outline:none;
     cursor:text;
-    padding:0 10px 0;
+    padding:12px 23px;
+    line-height: 21px;
     overflow:auto;
     display:block;
     word-wrap:break-word;
-    font-size:16px;
+    font-size:14px;
     font-family:sans-serif;
 }
 .edui-editor-body.focus{border:1px solid #5c9dff}

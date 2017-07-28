@@ -45,3 +45,8 @@ ApiRequest.set({
 	success : ApiRequestSuccess,
 	error : ApiRequestError,
 })
+
+
+$(document).on('change' , '#js-switch' , function(){
+	window.location.href = '?ss'
+})

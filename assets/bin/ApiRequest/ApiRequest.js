@@ -156,6 +156,7 @@ var ApiRequest = (function(ApiRequestList){
 
 
 		promise.then(function(data){
+			console.log(option)
 			! isset(option.success) && isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success(apiName , data) : ''
 		} , function(data){
 			console.log(data)
