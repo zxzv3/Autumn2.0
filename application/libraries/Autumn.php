@@ -10,6 +10,15 @@ class Autumn{
 		self::$CI = & get_instance();
 	}
 	
+	static public function is_login(){
+		if( ! isset($_SESSION['user'])){
+			Loader::view(array(
+				'/login'
+			) , array() , HOME_TEMPLATE);
+			return false;
+		}
+		return true;
+	}
 
 	static public function getRealIp(){
 		$ip = false;

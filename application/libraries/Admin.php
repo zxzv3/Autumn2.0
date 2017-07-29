@@ -9,7 +9,7 @@ class Admin{
 		if( ! isset($_SESSION['admin_user'])){
 			Loader::view(array(
 				'/login'
-			) , array() , 'admin');
+			) , array() , ADMIN_TEMPLATE);
 			return false;
 		}
 		return true;
