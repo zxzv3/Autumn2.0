@@ -50,7 +50,8 @@ class Groups extends CI_Controller {
 
 		}
 		Loader::view(array('admin_user/groups') , array(
-			'Group_list' => $Group_list
+			'Group_list' => $Group_list,
+			'list_count' => $this->Admin_group_model->get_count(),
 		) , ADMIN_TEMPLATE);
 	}
 }

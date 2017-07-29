@@ -9,6 +9,15 @@
 		.box .left{min-width:900px;float: left;width: 50%;}
 		.box .right{float: left;width: 50%;}
 		#js-save{margin-right: 0}
+		.fileQueued{
+			float: left;
+			width: 200px;
+			margin-left: 10px;
+			display: none;
+			margin-top:4px;
+		}
+		.fileQueued img{float: left;border-radius: 100%}
+		.fileQueued span{font-size:12px;margin-left:10px;margin-top:8px;float: left;}
 	</style>
 </head>
 <body>
@@ -36,7 +45,12 @@
 				
 				<div class="tools">
 					<button class="btn blue-o fr" id="js-save"><i class="fa fa-save"></i>保存文章</button>
-					<button class="btn"><i class="fa fa-upload"></i>上传封面图片</button>
+					<button class="btn fl" id="js-picker" style="padding:0;"><i class="fa fa-upload"></i>修改封面图片</button>
+					<div class="fileQueued" id="fileQueued">
+						<img src="https://static.youku.com/user/img/avatar/310/56.jpg" width="30" height="30">
+						<span>上传中</span>
+					</div>
+
 				</div>
 				<div id="Umediter" api-param-name='content' style="width:100%;height:540px;"></div>
 			</div>
@@ -61,9 +75,91 @@
     <script src="./assets/bin/umeditor/lang/zh-cn/zh-cn.js"></script>
 	<!-- load umeditor -->
 
+	<!-- load webuploader -->
+	<link href="./assets/bin/webuploader/webuploader.css" rel="stylesheet" type="text/css" >
+	<script src="./assets/bin/webuploader/webuploader.js"></script>
+	<!-- load webuploader -->
+
 	<script type="text/javascript">
 		UM.delEditor('Umediter');
  		um = UM.getEditor('Umediter');
+
+
+ 		var BASE_URL = '';
+		var uploader = WebUploader.create({
+
+		    // swf文件路径
+		    swf: BASE_URL + '/js/Uploader.swf',
+
+		    // 文件接收服务端。
+		    server: './api/admin/article/upload',
+
+		    // 选择文件的按钮。可选。
+		    // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+		    pick: '#js-picker',
+
+		    // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+		    resize: true,
+
+		    // 只允许选择图片文件。
+		    accept: {
+		        extensions: 'gif,jpg,jpeg,bmp,png',
+		    }
+		});
+
+
+
+		// 当有文件被添加进队列的时候
+		uploader.on( 'fileQueued', function( file ) {
+			// 如果为非图片文件，可以不用调用此方法。
+			// thumbnailWidth x thumbnailHeight 为 100 x 100
+			uploader.makeThumb( file, function( error, src ) {
+				if (error) {
+					$img.replaceWith('<span>不能预览</span>');
+					return;
+				}
+				console.log(src)
+				$("#fileQueued").show().find('img').attr('src' , src);
+			}, 300, 300 );
+			uploader.upload();
+		});
+
+
+		// 文件上传过程中创建进度条实时显示。
+		uploader.on( 'uploadProgress', function( file, percentage ) {
+		    $("#fileQueued span").text(percentage * 100 + '%').css({'color' : 'blue'})
+		});
+
+
+
+		// 文件上传成功，给item添加成功class, 用样式标记上传成功。
+		uploader.on( 'uploadSuccess', function( file , data) {
+			try{ 
+				var data = $.parseJSON(data._raw);
+				if(data.state){
+			    	$("#fileQueued span").text('上传成功').css({'color' : 'green'})
+				}else{
+					popup.toast(data.message.error)
+			    	$("#fileQueued span").text('上传失败').css({'color' : 'red'})
+				}
+			}catch (e){
+				popup.toast('上传失败')
+		    	$("#fileQueued span").text('上传失败').css({'color' : 'red'})
+			} 
+			uploader.reset()
+		});
+
+		// 文件上传失败，显示上传出错。
+		uploader.on( 'uploadError', function( file ) {
+		    $("#fileQueued span").text('上传失败').css({'color' : 'red'})
+		});
+
+		// 完成上传完了，成功或者失败，先删除进度条。
+		uploader.on( 'uploadComplete', function( file ) {
+		    $( '#'+file.id ).find('.progress').remove();
+		});
+
+
  		$("#js-save").click(function(){
  			ApiRequest.push('Article/Create' , {params : {content : um.getContent()}})
  		});

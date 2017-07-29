@@ -23,13 +23,14 @@ class Lists extends CI_Controller {
 		$Article_list = $this->Article_model->get_list(array());
 		foreach ($Article_list as &$value) {
 			$value['from_class'] = $this->Class_model->get(array('id' => $value['from_class']))['name'];
-			$value['content'] = mb_substr($value['content'], 0 , 30) . '...';
+			$value['content'] = mb_substr(strip_tags(htmlspecialchars_decode($value['content'])), 0 , 30) . '...';
 		}
 
 
 		Loader::view(array('article/lists') , array(
 			'Class_list' => $Class_list,
 			'Article_list' => $Article_list,
+			'list_count' => $this->Article_model->get_count(),
 		) , ADMIN_TEMPLATE);
 	}
 }

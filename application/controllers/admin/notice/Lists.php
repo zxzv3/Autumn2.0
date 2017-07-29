@@ -41,6 +41,7 @@ class Lists extends CI_Controller {
 		}
 		Loader::view(array('notice/lists') , array(
 			'Notice_list' => $Notice_list,
+			'list_count' => $this->Notice_model->get_count()
 		) , ADMIN_TEMPLATE);
 	}
 }

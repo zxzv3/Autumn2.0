@@ -34,7 +34,8 @@ class Lists extends CI_Controller {
 
 		Loader::view(array('admin_user/lists') , array(
 			'Admin_user_list' => $Admin_user_list,
-			'Group_list' => $Group_list
+			'Group_list' => $Group_list,
+			'list_count' => $this->Admin_user_model->get_count()
 		) , ADMIN_TEMPLATE);
 	}
 }

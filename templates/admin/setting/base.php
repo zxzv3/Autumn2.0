@@ -23,7 +23,7 @@
 			<h1>基础设置</h1>
 			<table class="table-list setting">
 				<tr>
-					<th width="190">配置项名称</th>
+					<th width="500">配置项名称</th>
 					<th width="350">配置项值</th>
 					<th width="220">调用方法</th>
 					<th width="220">操作</th>

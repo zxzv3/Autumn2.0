@@ -13,7 +13,8 @@
 	<div class="warpper">
 		<div class="tools">
 			<button class="btn active" id="js-create-admin-user"><i class="fa fa-user-plus"></i>添加管理员</button>
-			<select id="">
+			<!-- <button class="btn" id="js-search"><i class="fa fa-search"></i>搜索筛选</button> -->
+			<select id="js-switch" name='group'>
 				{Group_list}
 				<option value="{name}">{name}</option>
 				{/Group_list}
@@ -46,6 +47,7 @@
 			</tr>
 			{/Admin_user_list}
 		</table>		
+		<?php $this->load->view(ADMIN_TEMPLATE . '/template/page.php');?>
 		
 	</div>
 	
@@ -77,9 +79,12 @@
 				<option value="1">封禁</option>
 			</select>
 		</div>
+
+
 	</script>
 	<?php $this->load->view(ADMIN_TEMPLATE . '/template/footer.php')?>
 	<script type="text/javascript">
+		
 		$("#js-create-admin-user").click(function(){
 			popup.sure({
 				title : '添加管理员',

@@ -1,6 +1,11 @@
 #Umediter{
-    color:#555;
+    color:#333;
+    line-height: 21px;
     width:100%!important;
+}
+#Umediter p{
+    line-height: 21px;
+    color:#333;
 }
 .edui-container{
     position: relative;

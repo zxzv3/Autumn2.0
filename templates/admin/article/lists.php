@@ -43,32 +43,11 @@
 			{/Article_list}
 
 		</table>
+		<?php $this->load->view(ADMIN_TEMPLATE . '/template/page.php');?>
 	
 	</div>
 
 	
-	<script type="text/dom">
-		var create-notice = <div class="create-notice" api-name='Notice/Create'>
-			<input type="text" api-param-name='title' placeholder="请输入通知的标题" max="50" min="2">
-			<div id="Umediter" api-param-name='content' style="width:100%;height:340px;"></div>
-		</div>
-		var edit-notice = <div class="edit-notice" api-name='Notice/Edit'>
-			<input type="text" api-param-name='title' value="{%title%}" placeholder="请输入通知的标题" max="50" min="2">
-			<div id="Umediter" api-param-name='content' style="width:100%;height:340px;">{%content%}</div>
-		</div>
-
-		var create-letter = <div class="create-letter" api-name='Notice/Create'>
-			<input type="text" api-param-name='from_user' placeholder="请输入接收私信的用户ID" max="50" min="1">
-			<input type="text" api-param-name='title' placeholder="请输入私信的标题" max="50" min="2">
-			<div id="Umediter" api-param-name='content' style="width:100%;height:340px;"></div>
-		</div>
-		var edit-letter = <div class="edit-letter" api-name='Notice/Edit'>
-			<input type="text" api-param-name='title' value="{%title%}" placeholder="请输入私信的标题" max="50" min="2">
-			<div id="Umediter" api-param-name='content' style="width:100%;height:340px;">{%content%}</div>
-		</div>
-	</script>
-
-
 
 	<?php $this->load->view(ADMINDIR . '/template/footer.php')?>
 
@@ -83,9 +62,19 @@
 	<!-- load umeditor -->
 
 	<script type="text/javascript">
-		$("#js-create-article").click(function(){
+		$(".fa-edit").click(function(){
+			window.location.href='./<?=ADMINDIR?>/article/edit?id=' + $(this).data('id')
+		});
 
-		})
+		$(".fa-trash-o").click(function(event) {
+			var id = $(this).data('id');
+			popup.sure({
+				title : '确认删除',
+				content : '您确定要删除这个文章吗？您确定要删除这个文章吗？您确定要删除这个文章吗？您确定要删除这个文章吗？',
+			}).then(function(){
+				ApiRequest.push('Article/Remove' , {params : {id : id}})
+			})
+		});
 	</script>
 
 </body>

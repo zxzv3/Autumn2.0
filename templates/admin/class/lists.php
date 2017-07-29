@@ -40,7 +40,7 @@
 
 
 			</table>
-			<?php $this->load->view('admin/template/page.php');?>
+		<?php $this->load->view(ADMIN_TEMPLATE . '/template/page.php');?>
 			<style type="text/css">
 				.position{float: left;padding:5px;background-color: #fff;margin-top:10px;}
 				.position a{text-decoration: none;border-right: 1px solid #eee;color:#aaa;}

@@ -46,6 +46,7 @@
 			</tr>
 			{/User_list}
 		</table>		
+		<?php $this->load->view(ADMIN_TEMPLATE . '/template/page.php');?>
 		
 	</div>
 	
