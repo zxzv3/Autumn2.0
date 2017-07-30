@@ -1,0 +1,166 @@
+body {
+  background: url('http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/00/02/ChMkJ1ebCDKIEDi5ABUOrZYu9-8AAT9xQMrk50AFQ7F784.jpg');
+}
+html,
+body {
+  height: 100%;
+}
+.menu {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.tools {
+  width: 100%;
+  height: 45px;
+  background: #eee;
+  background-color: rgba(190, 190, 190, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  bottom: 0;
+}
+.tools .item {
+  height: 100%;
+  float: left;
+  width: 55px;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  margin-right: 4px;
+  line-height: 40px;
+  position: relative;
+}
+.tools .item:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.tools .item img {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  height: 30px;
+  width: 30px;
+}
+.warpper {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  height: 100%;
+}
+.warpper .icon {
+  float: left;
+  overflow: hidden;
+  color: #fff;
+  padding: 25px;
+  width: 130px;
+  text-align: center;
+  height: 100%;
+}
+.warpper .icon .item {
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 18px;
+  height: 90px;
+  float: left;
+  padding: 10px;
+  width: 80px;
+  border-radius: 5px;
+  text-align: center;
+}
+.warpper .icon .item span {
+  color: #eee;
+}
+.warpper .icon .item:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.warpper .icon .item img {
+  margin-bottom: 5px;
+  width: 49px;
+  height: 49px;
+}
+.gloss {
+  overflow: hidden;
+  -webkit-transition: all 0.35s ease-in;
+  transition: all 0.35s ease-in;
+}
+.gloss:hover {
+  background: #26C281;
+}
+.gloss:before {
+  content: ' ';
+  position: absolute;
+  background: #fff;
+  width: 25px;
+  height: 100%;
+  top: 0;
+  left: -45px;
+  opacity: 0.3;
+  -webkit-transition: all 0.25s ease-out;
+  transition: all 0.25s ease-out;
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.gloss:hover:before {
+  width: 45px;
+  left: 205px;
+}
+.center-icon {
+  width: 20px;
+  float: left;
+  margin: 11.5px 8px 0 0;
+}
+.center {
+  width: 100%;
+  height: 100%;
+  min-width: 850px;
+  min-height: 450px;
+  padding: 20px;
+}
+.center .function button {
+  font-size: 14px;
+  margin-right: 0;
+}
+.center .table-list {
+  margin-top: 10px;
+}
+.center .table-list td,
+.center .table-list th {
+  padding: 9px 0 9px 0;
+  padding-left: 25px;
+}
+.center .top-header {
+  float: left;
+  padding-bottom: 20px;
+  width: 100%;
+}
+.center .top-header .l {
+  width: 10%;
+  float: left;
+}
+.center .top-header .r {
+  width: 88%;
+  float: left;
+  margin-top: 7px;
+}
+.center .top-header .r span {
+  color: #444;
+  margin-bottom: 17px;
+  float: left;
+}
+.center .top-header .r .blue-o {
+  margin-top: -10px;
+  margin-right: -5px;
+}
+.center .top-header .r .layui-progress {
+  float: left;
+  width: 100%;
+}
+.center .top-header img {
+  width: 77%;
+  height: 77%;
+}

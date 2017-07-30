@@ -175,3 +175,107 @@ ERROR - 2017-07-29 09:01:41 --> 404 Page Not Found: Public/tz.php
 ERROR - 2017-07-29 09:01:42 --> 404 Page Not Found: Public/tz.php
 ERROR - 2017-07-29 09:01:43 --> 404 Page Not Found: Public/tz.php
 ERROR - 2017-07-29 09:01:44 --> 404 Page Not Found: Public/tz.php
+ERROR - 2017-07-29 17:09:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:16:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:22:30 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:27:36 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:28:55 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:35:26 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:48:42 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:48:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:48:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:58:10 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 18:59:31 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 19:17:07 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 19:17:27 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 21:22:12 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 21:38:23 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:38:28 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:09 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:10 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:11 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:11 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:12 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:12 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:13 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:14 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:15 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:40 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:39:42 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:43:50 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:43:55 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:43:58 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:44:03 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:44:10 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:44:14 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:44:58 --> 404 Page Not Found: api/Home/user
+ERROR - 2017-07-29 21:47:54 --> 404 Page Not Found: api/home/User/login
+ERROR - 2017-07-29 21:48:00 --> 404 Page Not Found: api/home/User/login
+ERROR - 2017-07-29 21:48:07 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:48:07 --> Unable to connect to the database
+ERROR - 2017-07-29 21:48:11 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:48:11 --> Unable to connect to the database
+ERROR - 2017-07-29 21:48:17 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:48:17 --> Unable to connect to the database
+ERROR - 2017-07-29 21:48:28 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:48:28 --> Unable to connect to the database
+ERROR - 2017-07-29 21:49:15 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:49:15 --> Unable to connect to the database
+ERROR - 2017-07-29 21:49:17 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-29 21:49:17 --> Unable to connect to the database
+ERROR - 2017-07-29 21:50:56 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:51:21 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 37
+ERROR - 2017-07-29 21:52:49 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:52:51 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:52:57 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:05 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:07 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:09 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:15 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:18 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 21:53:23 --> Severity: Notice --> Trying to get property of non-object /home/tocurd/www/application/controllers/api/home/User.php 36
+ERROR - 2017-07-29 22:02:48 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:03:23 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:03:47 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:04:22 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:04:30 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:04:35 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:05:56 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:05:57 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:06:00 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:06:01 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:11:40 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:11:40 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:13:00 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:13:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:14:21 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:14:27 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:14:53 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:15:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:16:27 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:17:11 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:17:17 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:17:34 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:17:39 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:20:25 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:20:56 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:24:04 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:24:15 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:24:30 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:25:34 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:27:46 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:30:10 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:34:40 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:35:31 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:36:20 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:37:37 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:38:14 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:38:19 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:40:37 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:47:09 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 22:49:17 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 23:27:31 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 23:27:55 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 23:28:11 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 23:28:16 --> 404 Page Not Found: Faviconico/index
+ERROR - 2017-07-29 23:28:18 --> 404 Page Not Found: Faviconico/index

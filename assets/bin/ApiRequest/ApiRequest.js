@@ -37,7 +37,6 @@ var ApiRequest = (function(ApiRequestList){
 		ApiRequestData.ApiRequestList = ApiRequestList;
 		ApiRequestData.option = option;
 
-
 		// 解决部分IE可能不支持console的问题
 		window.console = window.console || (function () {  
 			var c = {}; c.log = c.warn = c.debug = c.info = c.error = c.time = c.dir = c.profile  
@@ -52,12 +51,15 @@ var ApiRequest = (function(ApiRequestList){
 
 					$api_element = $(this).parents(replace("[$]" , [config.name.apiName]));
 
+					$(value).addClass('loading');
 
 					ApiRequest.push($api_element.attr(config.name.apiName) , {
 						target : $api_element
 					}).then(function(data){
+						$(value).removeClass('loading');
 						isset(ApiRequestData.option) && isset(ApiRequestData.option.success) ? ApiRequestData.option.success($api_element.attr(config.name.apiName) , data) : ''
 					} , function(data){
+						$(value).removeClass('loading');
 						isset(ApiRequestData.option) && isset(ApiRequestData.option.error) ? ApiRequestData.option.error($api_element.attr(config.name.apiName) , data) : ''
 					});
 				})

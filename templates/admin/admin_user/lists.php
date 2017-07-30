@@ -12,7 +12,7 @@
 	<?php $this->load->view(ADMIN_TEMPLATE . '/template/top-header.php')?>
 	<div class="warpper">
 		<div class="tools">
-			<button class="btn active" id="js-create-admin-user"><i class="fa fa-user-plus"></i>添加管理员</button>
+			<button class="btn active" id="js-create-admin-user"><i class="fa fa-user-plus"></i>添加管理员2</button>
 			<!-- <button class="btn" id="js-search"><i class="fa fa-search"></i>搜索筛选</button> -->
 			<select id="js-switch" name='group'>
 				{Group_list}
@@ -84,7 +84,7 @@
 	</script>
 	<?php $this->load->view(ADMIN_TEMPLATE . '/template/footer.php')?>
 	<script type="text/javascript">
-		
+
 		$("#js-create-admin-user").click(function(){
 			popup.sure({
 				title : '添加管理员',

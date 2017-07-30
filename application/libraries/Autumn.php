@@ -59,7 +59,7 @@ class Autumn{
 			$params = $GET;
 		}
 
-		if($params == array()) return array();
+		if($params == array()) self::end(false , '您输入的参数不完全，请检查您输入的数据');
 
 		$return_params = new stdClass();
 		foreach ($params as $key => $value){

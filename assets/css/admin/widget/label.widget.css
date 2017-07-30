@@ -1,1 +1,21 @@
-.label{padding:3px 5px;font-size:12px;border-radius:5px;border:1px solid #eee}.label.blue{border:none;background-color:#339beb;color:#fff}.label.danger{background-color:#ff5d4c;color:#fff;border:none}.label.success{background-color:#34bf5e;color:#fff;border:none}
+.label {
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+.label.blue {
+  border: none;
+  background-color: #339BEB;
+  color: #fff;
+}
+.label.danger {
+  background-color: #ff5d4c;
+  color: #fff;
+  border: none;
+}
+.label.success {
+  background-color: #34bf5e;
+  color: #fff;
+  border: none;
+}

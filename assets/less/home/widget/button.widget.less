@@ -1,0 +1,70 @@
+
+.disabled{
+	opacity:0.5!important;
+	cursor: no-drop!important;
+}
+.btn{
+	outline:none;
+	cursor: pointer;
+	border:none;
+	color:#888;
+	font-size: 12px;
+	padding:9px 15px;
+	border:1px solid #f2f2f2;
+	border-radius: 6px;
+	margin-right:6px;
+	background-color: #fff;
+	i{
+		margin-right:10px;
+	}
+
+
+	&.loading{
+		opacity:0.6!important;
+		cursor: no-drop!important;
+		i{	
+			&:before{
+				content: "\f110";
+			}
+		    animation: fa-spin 2s infinite linear;
+		}
+	}
+	&.danger{
+		border:none;
+		background-color:#ed3f14;
+		color:#fff;
+	}
+	&.success{
+		border:none;
+		background-color:#19be6b;
+		color:#fff;
+	}
+	&.warning{
+		border:none;
+		background-color:#ff9900;
+		color:#fff;
+	}
+
+	&.active , &.fezocms{
+		border:none;
+		background-color:#2d8cf0;
+		color:#fff;
+	}
+	&:hover{
+		opacity:0.8;
+		transition: all 0.7s;
+		-moz-transition: all 0.7s;	/* Firefox 4 */
+		-webkit-transition: all 0.7s;	/* Safari 和 Chrome */
+		-o-transition: all 0.7s;	/* Opera */
+		// border:1px solid #2d8cf0;
+		// color:#2d8cf0;
+	}
+	&.blue-o{
+		background-color: transparent;
+		border:1px solid #2d8cf0;
+		color:#2d8cf0;
+	}
+}
+
+
+
