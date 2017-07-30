@@ -328,6 +328,16 @@ textarea {
 .btn i {
   margin-right: 10px;
 }
+.btn.loading {
+  opacity: 0.6!important;
+  cursor: no-drop !important;
+}
+.btn.loading i {
+  animation: fa-spin 2s infinite linear;
+}
+.btn.loading i:before {
+  content: "\f110";
+}
 .btn.danger {
   border: none;
   background-color: #ed3f14;
@@ -350,9 +360,17 @@ textarea {
   color: #fff;
 }
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+  transition: all 0.7s;
+  -moz-transition: all 0.7s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.7s;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.7s;
+  /* Opera */
 }
 .btn.blue-o {
+  background-color: transparent;
   border: 1px solid #2d8cf0;
   color: #2d8cf0;
 }

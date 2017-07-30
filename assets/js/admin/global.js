@@ -47,6 +47,7 @@ ApiRequest.set({
 })
 
 
+
 $(document).on('change' , '#js-switch' , function(){
-	window.location.href = '?ss'
+	window.location.href = path + '?' + $(this).attr('name') + '=' + $(this).val()
 })
