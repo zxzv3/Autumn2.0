@@ -6,8 +6,8 @@
 	</div>
 	<div class="login">
 		<div class="top-header">
-			<h1>B2B离线云发布系统</h1>
-			<span>B2B offline cloud publishing system</span>
+			<h1>在线支付系统用户登录</h1>
+			<span>Online payment system user login</span>
 		</div>
 		<div class="box" api-name="User/Login">
 			<div class="item">
