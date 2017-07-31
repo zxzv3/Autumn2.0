@@ -12,8 +12,8 @@ class V1 extends CI_Controller {
 			"{$this->name}/index:GET" => array(
 				'money' => array('max' => 10 , 'min' => 1 , 'name' => '支付金额'),
 				'paytype' => array('max' => 10 , 'min' => 1 , 'name' => '支付方法'),
-				'active_url' => array('max' => 10 , 'min' => 1 , 'name' => '同步地址'),
-				'notice_url' => array('max' => 10 , 'min' => 1 , 'name' => '异步地址'),
+				'active_url' => array('max' => 152 , 'min' => 1 , 'name' => '同步地址'),
+				'notice_url' => array('max' => 152 , 'min' => 1 , 'name' => '异步地址'),
 				'order_id' => array('max' => 32 , 'min' => 1 , 'name' => '商户编号'),
 				'attribute' => array('max' => 216 , 'min' => 0 , 'name' => '附加属性'),
 				'merchant_id' => array('max' => 16 , 'min' => 1 , 'name' => '商户ID'),
@@ -58,7 +58,7 @@ class V1 extends CI_Controller {
 		if( ! $this->User_model->is_exist(array('id' => $this->params->merchant_id))) Autumn::end(false , '无效的商户号');
 		
 		$Passageway_data = $this->Passageway_model->get(array('open' => 0 , 'name_key' => $this->params->paytype));
-		if( ! $Passageway_data['id']) Autumn::end(false , '无效的支付方法');
+		if( ! $Passageway_data['id']) Autumn::end(false , '该支付方法没有启用');
 
 		if( ! isset(json_decode($Passageway_data['value'])[1])){
 			Autumn::end(false , '支付接口异常或未配置');

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: 2017-07-30 12:19:25
+-- Generation Time: 2017-07-31 08:18:29
 -- 服务器版本： 5.5.56-log
 -- PHP Version: 5.6.30
 
@@ -67,7 +67,7 @@ CREATE TABLE `autumn_admin_user` (
 --
 
 INSERT INTO `autumn_admin_user` (`id`, `username`, `password`, `from_group`, `lost_time`, `lost_ip`, `count`, `state`, `slat`) VALUES
-(1, 'admin123', 'ad6916af2136815599c76530ca6f01df', 1, '2017-07-30 12:12:57', '127.0.0.1', 18, 0, '325462'),
+(1, 'admin123', 'ad6916af2136815599c76530ca6f01df', 1, '2017-07-30 23:02:14', '127.0.0.1', 20, 0, '325462'),
 (5, '231233122', '4eed63e5a174dd9d2fd9e065e437b138', 9, '0000-00-00 00:00:00', '', 0, 0, '180751');
 
 -- --------------------------------------------------------
@@ -131,6 +131,65 @@ CREATE TABLE `autumn_notice` (
 -- --------------------------------------------------------
 
 --
+-- 表的结构 `autumn_order`
+--
+
+CREATE TABLE `autumn_order` (
+  `id` int(11) NOT NULL,
+  `from_user` int(11) NOT NULL,
+  `paytype` int(11) NOT NULL,
+  `money` float NOT NULL,
+  `platform_order_id` varchar(32) NOT NULL,
+  `merchant_order_id` varchar(32) NOT NULL,
+  `create_time` datetime NOT NULL,
+  `arrive_time` datetime NOT NULL,
+  `notice_url` varchar(512) NOT NULL,
+  `active_url` varchar(512) NOT NULL,
+  `attribute` varchar(216) NOT NULL,
+  `type` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- 转存表中的数据 `autumn_order`
+--
+
+INSERT INTO `autumn_order` (`id`, `from_user`, `paytype`, `money`, `platform_order_id`, `merchant_order_id`, `create_time`, `arrive_time`, `notice_url`, `active_url`, `attribute`, `type`) VALUES
+(1, 0, 0, 0.01, '3213213', '21321321', '2017-07-27 00:00:00', '2017-07-31 00:00:00', 'http://www.baidu.com/', 'http://www.baidu.com/', '12321', 0),
+(2, 1, 1, 312, '2017073102081430205218', '321', '2017-07-31 02:08:14', '0000-00-00 00:00:00', 'ads', '12312', '321', 0),
+(3, 1, 1, 312, '2017073102133117662287', '321', '2017-07-31 02:13:31', '0000-00-00 00:00:00', 'ads', '12312', '321', 0),
+(4, 1, 1, 312, '2017073102135647372000', '21321312', '2017-07-31 02:13:56', '0000-00-00 00:00:00', 'ads', '12312', '321', 0),
+(5, 1, 1, 312, '2017073102240150176492', '2312321312', '2017-07-31 02:24:01', '0000-00-00 00:00:00', 'ads', '12312', '321', 0),
+(6, 1, 1, 312, '2017073102264047096689', '2331232312', '2017-07-31 02:26:40', '0000-00-00 00:00:00', 'http://127.168.0.1/api/v1?money=312', 'http://127.168.0.1/api/v1?money=312', '321', 0);
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `autumn_passageway`
+--
+
+CREATE TABLE `autumn_passageway` (
+  `id` int(11) NOT NULL,
+  `name` varchar(16) NOT NULL,
+  `value` varchar(1024) NOT NULL,
+  `type` varchar(32) NOT NULL,
+  `valueSplit` varchar(1024) NOT NULL,
+  `name_key` varchar(26) NOT NULL,
+  `open` int(11) NOT NULL,
+  `paytype` varchar(32) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4;
+
+--
+-- 转存表中的数据 `autumn_passageway`
+--
+
+INSERT INTO `autumn_passageway` (`id`, `name`, `value`, `type`, `valueSplit`, `name_key`, `open`, `paytype`) VALUES
+(1, '花旗支付宝', '[\"支付宝\",\"{\\\"file\\\" : \\\"huaqi\\\" , \\\"function\\\" : \\\"alipay\\\"}\",\"https://www.baidu.com/\",\"10001\",\"kjl3kljkl4nmkl2n1llknlk\",\"12\"]', 'input', '[\"\"]', 'alipay', 0, '支付宝'),
+(2, '爱扬支付宝', '[\"支付宝\",\"{\\\"file\\\" : \\\"aiyang\\\" , \\\"function\\\" : \\\"alipay\\\"}\",\"https://www.baidu.com/\",\"10001\",\"kjl3kljkl4nmkl2n1llknlk\",\"12\"]', 'input', '[\"\"]', 'alipay', 1, '支付宝'),
+(4, '爱扬微信', '[\"微信\",\"wxpay\",\"https://www.baidu.com/\",\"10002\",\"kjl3kljkl4nmkl2n1llknlk\",\"5\"]', 'input', '[\"\"]', 'wxpay', 0, '微信');
+
+-- --------------------------------------------------------
+
+--
 -- 表的结构 `autumn_setting`
 --
 
@@ -152,8 +211,7 @@ INSERT INTO `autumn_setting` (`id`, `name`, `value`, `type`, `valueSplit`, `name
 (5, '是否开启站点', 'yes', 'input', '[\"\"]', 'allowWebOpen'),
 (7, '短信接口密钥', '7c1cadb6887373dacb595c47166bfbd9', 'input', '[\"\"]', 'SmsInterfaceKey'),
 (8, '客服QQ', '208006737', 'input', '[\"\"]', 'serviceQq'),
-(9, '商户注册是否审核', 'no', 'input', '[\"\"]', 'auditReviewed'),
-(10, '用户默认结算模式', 'T+0', 'input', '[\"\"]', 'T+0');
+(9, '商户注册是否审核', 'no', 'input', '[\"\"]', 'auditReviewed');
 
 -- --------------------------------------------------------
 
@@ -261,6 +319,19 @@ ALTER TABLE `autumn_notice`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `autumn_order`
+--
+ALTER TABLE `autumn_order`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `autumn_passageway`
+--
+ALTER TABLE `autumn_passageway`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `id` (`id`);
+
+--
 -- Indexes for table `autumn_setting`
 --
 ALTER TABLE `autumn_setting`
@@ -318,6 +389,16 @@ ALTER TABLE `autumn_class`
 --
 ALTER TABLE `autumn_notice`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- 使用表AUTO_INCREMENT `autumn_order`
+--
+ALTER TABLE `autumn_order`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- 使用表AUTO_INCREMENT `autumn_passageway`
+--
+ALTER TABLE `autumn_passageway`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- 使用表AUTO_INCREMENT `autumn_setting`
 --

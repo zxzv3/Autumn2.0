@@ -33,9 +33,9 @@
 			<h1>通道列表</h1>
 			<table class="table-list setting" style="min-width: 100%">
 				<tr>
-					<th width="">配置项名称</th>
-					<th width="">通道类型</th>
-					<th width="">网关调用名称</th>
+					<th width="140">配置项名称</th>
+					<th width="140">通道类型</th>
+					<th width="350">网关调用名称</th>
 					<th width="">网关地址</th>
 					<th width="140">商户号</th>
 					<th width="">商户密钥</th>

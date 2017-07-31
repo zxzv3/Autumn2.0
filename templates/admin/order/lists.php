@@ -9,7 +9,7 @@
 	<div class="warpper">
 		<table class="table-list">
 			<tr>
-				<th><div class="widget-checkbox"></div></th>
+				<th width="30"><div class="widget-checkbox"></div></th>
 				<th>商户ID</th>	 
 				<th>平台编号</th>	 
 				<th>商户编号</th>
@@ -17,10 +17,10 @@
 				<th>订单金额</th>	 
 				<th>创建时间</th>	 
 				<th>到帐时间</th>	 
-				<th>异步地址</th>	 
-				<th>同步地址</th>	 
-				<th>状态</th>	 
-				<th>操作</th>	 
+				<!-- <th>异步地址</th>	  -->
+				<!-- <th>同步地址</th>	  -->
+				<th width="110">状态</th>	 
+				<th width="110">操作</th>	 
 			</tr>
 			
 
@@ -34,8 +34,8 @@
 				<td>{money}</td>
 				<td>{create_time}</td>
 				<td>{arrive_time}</td>
-				<td>{notice_url}</td>
-				<td>{active_url}</td>
+				<!-- <td>{notice_url}</td> -->
+				<!-- <td>{active_url}</td> -->
 				<td>{type}</td>
 				<td>
 					<i class="fa fa-check" data-id="{id}"></i>
