@@ -49,6 +49,8 @@ class Autumn{
 			$params = $params[$type];
 		}
 
+		if( ! isset($params["{$name}:GET"]) && ! isset($params["{$name}:POST"])) return array();
+
 
 		$GET = isset($params["{$name}:GET"]) ? $params["{$name}:GET"] : array();
 		$POST = isset($params["{$name}:POST"]) ? $params["{$name}:POST"] : array();

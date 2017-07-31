@@ -6,9 +6,7 @@ $config['autumn'] = array(
 
 
 $config['home_jurisdiction'] = array(
-	'发布时间' => array(
-		'30天' => 'ds'
-	)
+	
 );
 
 

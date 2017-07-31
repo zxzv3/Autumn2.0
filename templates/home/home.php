@@ -1,247 +1,173 @@
-	<link rel="stylesheet" href="./assets/css/home/page/home.css?<?=time()?>">
-	<link rel="stylesheet" href="./assets/bin/layui/css/layui.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/home/page/home.css">
 </head>
-<body ondragstart="return false;">
-	<div class="tools" id="js-tools">
-		<div class="item gloss">
-			<img src="./assets/images/folder_win10.png" >
-		</div>
-		<div class="item gloss">
-			<img src="./assets/images/folder_win10.png" >
-		</div>
-		<div class="item gloss">
-			<img src="./assets/images/folder_win10.png" >
-		</div>
-
-	</div>
-	
+<body>
+	<?php $this->load->view(HOME_TEMPLATE . '/template/top-header')?>
+	<?php $this->load->view(HOME_TEMPLATE . '/template/menu')?>
 	<div class="warpper">
-		<div class="icon" id="js-menu">
-			<div class="item gloss" data-name="center">
-				<img src="./assets/images/server.png">
-				<span>发布中心</span>
-			</div>
-			<div class="item gloss" data-name="image">
-				<img src="./assets/images/folder_win10.png">
-				<span>产品图片</span>
-			</div>
-			<div class="item gloss" data-name="article">
-				<img src="./assets/images/folder_win10.png">
-				<span>文章模板</span>
-			</div>
-			<div class="item gloss" data-name="">
-				<img src="./assets/images/folder_win10.png">
-				<span>过期帐号</span>
-			</div>
-		</div>
+
+<table class="Index_card">
+          <tbody><tr>
+            <td style="width:65px;"><div class="em"></div></td>
+            <td width="32%">
+                <div class="Contact">
+                    <dl class="overflow-visible">
+                        <dt class="overflow-visible">
+                            <div id="ctl00_ContentPlaceHolder1_nameclass" class="Ti auth-state-pass-personal">
+                                <span class="abbr">
+                                    <span class="color_fei">Hi, <?=$_SESSION['user']['username']?></span>
+                                    <span class="color_shenn"></span>
+
+                                    <span class="auth-show">
+                                      <span class="auth-icon auth-icon-v">
+                                        <span class="auth-tip">
+                                          <span class="auth-tip-content">
+                                            <span class="auth-tip-ok"><a href="/user/verify/" title="您还没有进行实名认证">立即认证！</a></span>
+                                          </span>
+                                          <span class="auth-tip-corner"><span class="auth-tip-corner-inner"></span></span>
+                                        </span>
+                                        <a href="/user/realname/" class="auth-icon-v-link" title="已认证，认证类型：个人"></a>
+                                      </span>
+                                     
+                            </span>
+                            <span class="auth-btn"><a href="/user/realname/" class="Annkeld">立即认证</a></span>
+                            </span></div>
+                            <div class="Bz"><span class="ju">认证邮箱:&nbsp;<span class="color_ju"><?=@$_SESSION['user']['email']?></span>&nbsp;&nbsp;&nbsp;<span class="ju">商户ID:&nbsp;&nbsp;&nbsp;<span class="color_ju"><?=$_SESSION['user']['id']?></span></span></span></div>
+                        </dt>
+                        <dd>
+                            <ul class="aul">
+                                <li>安全手机：<span id="ctl00_ContentPlaceHolder1_classshouji" class="color_ju">已绑定</span><a href="/user/mobile/" id="ctl00_ContentPlaceHolder1_linshouji" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
+                                <li class="a">安全邮箱：<span id="ctl00_ContentPlaceHolder1_classemail" class="color_ju">已绑定</span><a href="/user/email/" id="ctl00_ContentPlaceHolder1_linemail" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
+                               <li class="b">实名认证：<span id="ctl00_ContentPlaceHolder1_shiming" class="color_ju">已认证</span><a href="/user/realname/index.aspx" id="ctl00_ContentPlaceHolder1_shimingtext" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
+                                <li class="c">提现密码：<span id="ctl00_ContentPlaceHolder1_classtixian" class="color_ju">已设置</span><a href="/user/awalpassword/" id="ctl00_ContentPlaceHolder1_lintixian" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+            <td style="width:0.5%;">&nbsp;</td>
+            <td style="width:65px;"><div class="em Money"></div></td>
+
+            <td width="32%">
+                <div class="Contact">
+                    <dl>
+                        <dt>
+                            <div class="Ti change">
+                                <span class="abbr fl" style="font-size: 33px;color:#333">555.00元</span>
+                               <button style="float: left;margin-top:3px;margin-left: 14px;padding:10px 14px;" class="btn"><i class="fa fa-money"></i>提 现</button>
+                            </div>
+                            <div id="ctl00_ContentPlaceHolder1_Span1" class="Bz changea" style="font-size: 14px;margin-top: 4px;">今日总订单数量：0 笔</div>
+                        </dt>
+                        <dd style="margin-top:24px;">
+                            <ul class="bul Mtop20">
+                                <li><a href="/user/verify/">提现账户</a></li>
+                                <li class="w"><a href="/user/order/">订单管理</a></li>
+                            </ul>
+                            <div class="Scfdh0"></div>
+                            <ul class="bul">
+                                <li><a href="/user/money/">收支明细</a></li>
+                                <li><a href="/user/cashcoupon/">提现记录</a></li>
+                                <li><a href="/user/invoice/">API接入</a></li>
+                                <li class="w"><a href="/user/userrate//">商家费率</a></li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+
+            <td style="width:0.5%;">&nbsp;</td>
+            <td style="width:65px;"><div class="em overcome"></div></td>
+            <td width="32%">
+                
+                <div class="Contact">
+                    <dl>
+                        <dt>
+                            <div class="Ti niaoyunicon change">
+                                <span class="abbr Pleft50" style="margin-left:50px;">专席客服</span>
+                            </div>
+                        </dt>
+                        <dd>
+                            <ul class="cul Pleft50">
+                                <li>工号：80037</li>
+                                <li>Q Q：<span class="color_tiann">69384331</span></li>
+                                <li>电话：</li>
+                            </ul>
+                        </dd>
+                    </dl>
+                </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="5" valign="top">
+                <dl class="dl_1">
+                    <dt>
+                        <div class="Dt_1">&nbsp;产品与统计信息</div>
+                    </dt>
+                    <dd>
+
+                        
+
+                        <div class="Dt_0">
+                        
+                            <div class="Bpwen1 ico7"><span>已绑定银行卡：(3)张</span><a href="/user/verify/">查看</a></div>
+                            <div class="Bpwen1 ico8"><span>站内消息未读：(0)条</span><a href="/user/message/">查看</a></div>
+                            
+                            <div class="Bpwen1 ico1"><span>今日成功订单总数：0笔</span></div>
+                            <div class="Bpwen1 ico2"><span>今日成功总金额：0元</span></div>
+                            
+                            <div class="Bpwen1 ico3"><span>今日网银订单金额：0元</span></div>
+                            <div class="Bpwen1 ico4"><span>今日点卡充值金额：0元</span></div>
+
+                            <div class="Bpwen2 ico5"><span>今日微信充值金额：0元</span></div>
+                            <div class="Bpwen2 ico6"><span>今日支付宝充值金额：0元</span></div>
+
+                            <div class="Scfdh0"></div>
+                        </div>
+                    </dd>
+                  
+                </dl>
+            </td>
+            <td>&nbsp;</td>
+            <td colspan="2" valign="top">
+
+                <dl class="dl_2">
+                    <dt>
+                        <div class="Dt_1">会员公告</div>
+                        <div class="Dt_3"><a href="/news.aspx?id=2" target="_blank" class="color_tiann">更多</a></div>
+                    </dt>
+                    <dd>
+                        <div class="Dt_0">
+                            
+                                   <div class="Bpwen1"><a href="/newsnotice.aspx?id=77">
+                                        支付宝通道维护完毕,请知晓</a>
+                                        <span>
+                                            04-02</span>
+                                    </div>
+                                
+                                   <div class="Bpwen1"><a href="/newsnotice.aspx?id=75">
+                                        接到支付宝官方通知,例行维护,请知晓!</a>
+                                        <span>
+                                            04-02</span>
+                                    </div>
+                                
+                                   <div class="Bpwen1"><a href="/newsnotice.aspx?id=62">
+                                        欢迎老客户 提出宝贵意见 , 发现BUG请及时提出</a>
+                                        <span>
+                                            03-20</span>
+                                    </div>
+                                
+                           
+                        </div>
+                    </dd>
+                    <dd class="Dd">
+                        <div class="Dd_1"></div>
+                        <div class="Dd_2"></div>
+                        <div class="Dd_3"></div>
+                    </dd>
+                </dl>
+            </td>
+          </tr>
+        </tbody></table>
+
 	</div>
-
-	<script type="text/dom">
-		var center = <div class="center">
-			<div class="top-header">
-				<div class="l">
-					<img src="./assets/images/server.png"/>
-				</div>
-				<div class="r">
-					<span>发布端服务已经准备就绪</span>
-					<button class="btn blue-o fr"><i class="fa fa-list"></i>开始发布</button>
-					<div class="layui-progress layui-progress-big fl" lay-showPercent="true">
-						<div class="layui-progress-bar layui-bg-blue" lay-percent="80%" style="width: 10%"></div>
-					</div>
-				</div>
-			</div>
-			
-
-			<div class="function">
-				<button class="btn" title="创建信息标题"><i class="fa fa-plus"></i>创建标题</button>
-				<button class="btn" title="标题创建历史记录"><i class="fa fa-history"></i>创建历史</button>
-				<button class="btn" title="清理已发布成功的标题"><i class="fa fa-eraser"></i>清理成功</button>
-				<button class="btn" title="重置发布失败的标题"><i class="fa fa-undo"></i>失败重发</button>
-				<button class="btn" title="清空全部标题"><i class="fa fa-times"></i>清空标题</button>
-				<button class="btn" title="设置信息发布时间"><i class="fa fa-clock-o"></i>计划任务</button>
-				<button class="btn" title="账号资料修改"><i class="fa fa-cog"></i>账号设置</button>
-				<button class="btn" title="今日发布详情"><i class="fa fa-cloud-upload"></i>发布日志</button>
-			</div>
-
-			<table class="table-list">
-				<tr>
-					<th>编号</th>
-					<th>信息标题</th>
-					<th>发布时间</th>
-					<th>发布状态</th>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-				<tr>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-					<td>dsa</td>
-				</tr>
-
-
-
-			</table>
-
-
-
-		</div>
-		
-		
-
-		var tools-item = <div class="item gloss" data-name="{%name%}" data-from-layer="{%from_layer%}">
-			<img src="{%url%}">
-		</div>
-	</script>
-
-
-	<?php $this->load->view(HOME_TEMPLATE . '/template/footer');?>
-	<script src="./assets/bin/layui/layui.js"></script>
-	<script type="text/javascript">
-		var layer;
-		var element
-		layui.use('layer', function(){
-			layer = layui.layer;
-		});
-		layui.use('element', function(){
-			element = layui.element();
-		});
-
-		setTimeout(function(){
-			$("#js-menu .item:eq(0)").click()
-		} , 300)
-
-
-		var openWindowList = [];
-		$("#js-menu .item").click(function(){
-			var name = $(this).data('name');
-			if($.inArray(name, openWindowList) != -1) return false;
-
-			switch(name){
-				case 'center' : 
-					style = {
-						name : 'center',
-						image : "./assets/images/server.png",
-						title : '<img src="./assets/images/server.png" class="center-icon" />发布中心' , 
-						content : dom.get('center') , 
-						icon : 5, 
-						area : ['962px' , '650px']
-					};
-				break;
-			}
-
-			
-			var data = layer.open({
-				title : style.title,
-				type: 1,
-				icon : style.icon,
-				area: style.area,
-				shade : 0,
-				fixed : false ,
-				shadeClose:false,
-				maxmin:true,
-				content: style.content,
-				cancel : function(){
-					$("#js-tools [data-name='" + style.name + "']").remove().empty();
-					openWindowList = $.grep(openWindowList, function(value) {
-						return value != style.name;
-					});
-				},
-				success: function(layero, index){
-					$("#js-tools").append(dom.get('tools-item' , {
-						name : style.name,
-						url : style.image,
-						from_layer : layero.selector
-					}))
-					openWindowList.push(style.name)
-				}
-			});
-
-			// 将打开的窗口的图标加到工具栏中
-		})
-		
-	</script>
 </body>
 </html>

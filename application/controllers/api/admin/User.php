@@ -78,6 +78,7 @@ class User extends CI_Controller {
 			'state' => $this->params->state,
 			'password' => $password,
 			'slat' => $slat,
+			'paytype' => json_encode($this->input->post('paytype'))
 		));
 		Autumn::end(true);
 	}
@@ -102,6 +103,8 @@ class User extends CI_Controller {
 			'slat' => $slat,
 			'from_group' => $this->params->group,
 			'state' => $this->params->state,
+			'merchant_key' => md5(time() . md5('test') . rand(100000 , 999999)),
+			'paytype' => json_encode($this->input->post('paytype'))
 		));
 		Autumn::end(true);
 	}

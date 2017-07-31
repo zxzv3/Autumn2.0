@@ -22,6 +22,14 @@ class Lists extends CI_Controller {
 		$this->load->model('User_model');
 		$User_list = $this->User_model->get_list(array());
 
+
+		// 支付权限列表
+		$this->load->model('Passageway_model');
+		$this->Passageway_model->group_by('paytype');
+		$Paytype_list = $this->Passageway_model->get_list(array() , 1 , 1 , array() , 'all');
+
+
+
 		foreach ($User_list as &$value) {
 			$value['data'] = json_encode($value);
 			$group = $this->User_group_model->get(array('id' => $value['from_group']));
@@ -37,7 +45,8 @@ class Lists extends CI_Controller {
 		Loader::view(array('user/lists') , array(
 			'User_list' => $User_list,
 			'Group_list' => $Group_list,
-			'list_count' => $this->User_model->get_count()
+			'list_count' => $this->User_model->get_count(),
+			'Paytype_list' => $Paytype_list,
 		) , ADMIN_TEMPLATE);
 	}
 }

@@ -21,3 +21,7 @@
 	<script type="text/javascript">
 		var path = '<?=$path?>';
 	</script>
+
+	<style type="text/css" media="screen">
+		th,td{white-space: nowrap!important;}
+	</style>

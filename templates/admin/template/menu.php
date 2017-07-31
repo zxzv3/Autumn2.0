@@ -27,8 +27,8 @@
 			<ul>
 				<li><a href="./<?=ADMINDIR?>/admin_user/lists"><i class="fa fa-list"></i> 管理列表</a></li>
 				<li><a href="./<?=ADMINDIR?>/admin_user/groups"><i class="fa fa-folder-o"></i> 管理角色</a></li>
-				<li><a href="./<?=ADMINDIR?>/user/lists"><i class="fa fa-user-o"></i> 用户列表</a></li>
-				<li><a href="./<?=ADMINDIR?>/user/groups"><i class="fa fa-user-circle-o"></i> 用户角色</a></li>
+				<li><a href="./<?=ADMINDIR?>/user/lists"><i class="fa fa-user-o"></i> 商户管理</a></li>
+				<li><a href="./<?=ADMINDIR?>/user/groups"><i class="fa fa-user-circle-o"></i> 商户角色</a></li>
 				<li><a href="./<?=ADMINDIR?>/user/setting"><i class="fa fa-cogs"></i> 用户设置</a></li>
 			</ul>
 		</div>
