@@ -44,6 +44,7 @@ class Lists extends CI_Controller {
 			$value['html3'] = @"<input type='text' data-param value='{$params[3]}' placeholder='请在此输入{$params[3]}的值'>";
 			$value['html4'] = @"<input type='text' data-param value='{$params[4]}' placeholder='请在此输入{$params[4]}的值'>";
 			$value['html5'] = @"<input type='text' data-param value='{$params[5]}' placeholder='请在此输入{$params[5]}的值'>";
+			$value['html6'] = @"<input type='text' data-param value='{$params[6]}' placeholder='请在此输入{$params[5]}的值'>";
 		
 			$value['active'] = $value['open'] == 0 ? 'active' : '';
 		}

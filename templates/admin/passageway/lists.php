@@ -35,11 +35,12 @@
 				<tr>
 					<th width="140">配置项名称</th>
 					<th width="140">通道类型</th>
-					<th width="350">网关调用名称</th>
+					<th width="">网关调用参数</th>
 					<th width="">网关地址</th>
 					<th width="140">商户号</th>
 					<th width="">商户密钥</th>
 					<th width="100">费率（%）</th>
+					<th width="140">启用金额 >=</th>
 					<th width="">启用</th>
 					<th width="">调用方法</th>
 					<th width="120">操作</th>
@@ -54,6 +55,7 @@
 					<td>{html3}</td>
 					<td>{html4}</td>
 					<td>{html5}</td>
+					<td>{html6}</td>
 					<td><div class="widget-checkbox {active}" data-open="{open}" data-id="{id}"></div></td>
 					<td><span class="label">{name_key}</span></td>
 					<td>
