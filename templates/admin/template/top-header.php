@@ -10,7 +10,7 @@
 
 
 
-	<div class="item" style="float: right;display: none">
+	<div class="item" style="float: right;">
 		<i class="fa fa-bell-o"></i>
 		<span>新消息</span>
 		<div class="news"></div>

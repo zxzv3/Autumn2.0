@@ -1857,3 +1857,223 @@ DEBUG - 2017-07-31 17:55:53 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2017-07-31 17:55:53 --> Config file loaded: F:\xampp\htdocs\pay\application\config/params.config.php
 DEBUG - 2017-07-31 17:55:53 --> Config file loaded: F:\xampp\htdocs\pay\application\config/autumn.config.php
 DEBUG - 2017-07-31 17:55:53 --> Total execution time: 0.0254
+DEBUG - 2017-07-31 19:28:16 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:28:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:28:16 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:28:16 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+ERROR - 2017-07-31 19:28:16 --> Severity: Warning --> mysqli::real_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-31 19:28:16 --> Unable to connect to the database
+DEBUG - 2017-07-31 19:28:54 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:28:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:28:54 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:28:54 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+ERROR - 2017-07-31 19:28:54 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'pay' /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-31 19:28:54 --> Unable to connect to the database
+DEBUG - 2017-07-31 19:28:55 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:28:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:28:55 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:28:55 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+ERROR - 2017-07-31 19:28:55 --> Severity: Warning --> mysqli::real_connect(): (HY000/1049): Unknown database 'pay' /home/tocurd/www/application/system/database/drivers/mysqli/mysqli_driver.php 201
+ERROR - 2017-07-31 19:28:55 --> Unable to connect to the database
+DEBUG - 2017-07-31 19:29:54 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:29:54 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:29:54 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:29:54 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:29:54 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:29:54 --> Total execution time: 0.0098
+DEBUG - 2017-07-31 19:30:06 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:06 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:30:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:06 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:06 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:06 --> Total execution time: 0.0130
+DEBUG - 2017-07-31 19:30:12 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:12 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:12 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:13 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:13 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:30:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:13 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:13 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:13 --> Total execution time: 0.0174
+DEBUG - 2017-07-31 19:30:15 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:15 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:15 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:15 --> Total execution time: 0.0213
+DEBUG - 2017-07-31 19:30:18 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:18 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:18 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:18 --> Total execution time: 0.0189
+DEBUG - 2017-07-31 19:30:22 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:22 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:22 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:22 --> Total execution time: 0.0258
+DEBUG - 2017-07-31 19:30:26 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:26 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:26 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:26 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:26 --> Total execution time: 0.0189
+DEBUG - 2017-07-31 19:30:27 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:27 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:27 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:27 --> Total execution time: 0.0166
+DEBUG - 2017-07-31 19:30:31 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:30:31 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:30:31 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:30:31 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:30:31 --> Total execution time: 0.0193
+DEBUG - 2017-07-31 19:31:27 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:27 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:27 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:27 --> Total execution time: 0.0283
+DEBUG - 2017-07-31 19:31:32 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:32 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:32 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:32 --> Total execution time: 0.0201
+DEBUG - 2017-07-31 19:31:40 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:40 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:40 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:41 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:42 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:42 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:42 --> Total execution time: 0.0371
+DEBUG - 2017-07-31 19:31:45 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:45 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:45 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:46 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:31:46 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:31:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:31:46 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:31:46 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:31:46 --> Total execution time: 0.0168
+DEBUG - 2017-07-31 19:34:30 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:34:30 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:34:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:34:30 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:34:30 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:34:30 --> Total execution time: 0.0188
+DEBUG - 2017-07-31 19:35:03 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:35:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:35:03 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:35:03 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:35:04 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:35:04 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:35:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:35:04 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:35:04 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:35:04 --> Total execution time: 0.0241
+DEBUG - 2017-07-31 19:37:02 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:02 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:02 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:16 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:16 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:16 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:17 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:17 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:37:17 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:17 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:17 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:17 --> Total execution time: 0.0227
+DEBUG - 2017-07-31 19:37:21 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:21 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:21 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:43 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:44 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:44 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:45 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:45 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:37:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:45 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:45 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:45 --> Total execution time: 0.0214
+DEBUG - 2017-07-31 19:37:48 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:48 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:48 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:37:49 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:37:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:37:49 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:37:49 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:49:12 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:49:12 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:49:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:49:12 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:49:12 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:49:12 --> Total execution time: 0.0186
+DEBUG - 2017-07-31 19:50:22 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:22 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:50:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:50:22 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:50:22 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:50:22 --> Total execution time: 0.0160
+DEBUG - 2017-07-31 19:50:23 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:23 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:50:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:50:23 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:50:23 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:50:23 --> Total execution time: 0.0128
+DEBUG - 2017-07-31 19:50:23 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2017-07-31 19:50:23 --> 404 Page Not Found: Faviconico/index
+DEBUG - 2017-07-31 19:50:38 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:38 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:50:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:50:38 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:50:38 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:50:38 --> Total execution time: 0.0125
+DEBUG - 2017-07-31 19:50:46 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:46 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:50:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:50:46 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:50:46 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:50:46 --> Total execution time: 0.0180
+DEBUG - 2017-07-31 19:50:57 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:50:57 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:50:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:50:57 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:50:57 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:50:57 --> Total execution time: 0.0157
+DEBUG - 2017-07-31 19:51:18 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:51:18 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:51:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:51:18 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:51:18 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:51:18 --> Total execution time: 0.0119
+DEBUG - 2017-07-31 19:51:35 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:51:35 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:51:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:51:35 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:51:35 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:51:35 --> Total execution time: 0.0146
+DEBUG - 2017-07-31 19:51:48 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:51:48 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:51:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:51:48 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:51:48 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:51:48 --> Total execution time: 0.0155
+DEBUG - 2017-07-31 19:52:00 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 19:52:00 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 19:52:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 19:52:00 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 19:52:00 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 19:52:00 --> Total execution time: 0.0129
+DEBUG - 2017-07-31 20:59:39 --> UTF-8 Support Enabled
+DEBUG - 2017-07-31 20:59:39 --> No URI present. Default controller set.
+DEBUG - 2017-07-31 20:59:39 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2017-07-31 20:59:39 --> Config file loaded: /home/tocurd/www/application/config/params.config.php
+DEBUG - 2017-07-31 20:59:39 --> Config file loaded: /home/tocurd/www/application/config/autumn.config.php
+DEBUG - 2017-07-31 20:59:39 --> Total execution time: 0.0159

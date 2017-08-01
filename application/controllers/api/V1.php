@@ -111,6 +111,7 @@ class V1 extends CI_Controller {
 		));
 		$this->Order_model->edit(array('id' => $Order_data['id']) , array(
 			'type' => 1,
+			'arrive_time' => date('Y-m-d H:i:s')
 		));
 
 		// 通知商户
