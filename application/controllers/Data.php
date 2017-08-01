@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-class Home extends CI_Controller {
+class Data extends CI_Controller {
 
 	public function __construct(){
 		parent::__construct();
@@ -17,7 +17,13 @@ class Home extends CI_Controller {
 
 	public function index(){
 		
-		Loader::view(array('home') , array(
+		Loader::view(array('data/home') , array(
+		) , HOME_TEMPLATE);
+	}
+
+	public function api(){
+		
+		Loader::view(array('data/api') , array(
 		) , HOME_TEMPLATE);
 	}
 }

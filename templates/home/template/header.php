@@ -7,3 +7,7 @@
 	<base href="<?=$this->config->item('autumn')['base_url']?>">
 	<link rel="stylesheet" href="./assets/css/home/style.css?<?=time()?>">
 	<link rel="stylesheet" href="./assets/bin/font-awesome/font-awesome.min.css">
+
+	<style type="text/css" media="screen">
+		th,td{white-space: nowrap!important;}
+	</style>

@@ -27,8 +27,8 @@
 
 		<div class="song">
 			<ul>
-				<li><a href="./admin_user/groups"><i class="fa fa-folder-o"></i> 资料下载</a></li>
-				<li><a href="./user/lists"><i class="fa fa-key"></i> API 密钥</a></li>
+				<li><a href="./data"><i class="fa fa-folder-o"></i> 资料下载</a></li>
+				<li><a href="./data/api"><i class="fa fa-key"></i> API 密钥</a></li>
 			</ul>
 		</div>
 	</div>
@@ -76,7 +76,8 @@
 
 		<div class="song">
 			<ul>
-				<li><a href="./passageway/lists"><i class="fa fa-comments"></i> 基本信息</a></li>
+				<li><a href="./user/base"><i class="fa fa-comments"></i> 基本信息</a></li>
+				<li><a href="./user/card"><i class="fa fa-comments"></i> 提现银行</a></li>
 			</ul>
 		</div>
 	</div>

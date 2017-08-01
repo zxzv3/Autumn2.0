@@ -37,6 +37,9 @@ class V1 extends CI_Controller {
 		method_exists($this, $method) ? $this->$method() : show_404();
 	}
 
+	public function test(){
+		echo 'success';
+	}
 
 
 	/**
@@ -51,7 +54,6 @@ class V1 extends CI_Controller {
 
 
 		$reslut = $this->notice_merchant($order_id);
-		var_dump($reslut);
 
 		$message = array(
 			0 => '您输入的订单号不存在',

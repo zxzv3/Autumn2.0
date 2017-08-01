@@ -34,11 +34,11 @@
                             <div class="Bz"><span class="ju">认证邮箱:&nbsp;<span class="color_ju"><?=@$_SESSION['user']['email']?></span>&nbsp;&nbsp;&nbsp;<span class="ju">商户ID:&nbsp;&nbsp;&nbsp;<span class="color_ju"><?=$_SESSION['user']['id']?></span></span></span></div>
                         </dt>
                         <dd>
-                            <ul class="aul">
-                                <li>安全手机：<span id="ctl00_ContentPlaceHolder1_classshouji" class="color_ju">已绑定</span><a href="/user/mobile/" id="ctl00_ContentPlaceHolder1_linshouji" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
-                                <li class="a">安全邮箱：<span id="ctl00_ContentPlaceHolder1_classemail" class="color_ju">已绑定</span><a href="/user/email/" id="ctl00_ContentPlaceHolder1_linemail" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
-                               <li class="b">实名认证：<span id="ctl00_ContentPlaceHolder1_shiming" class="color_ju">已认证</span><a href="/user/realname/index.aspx" id="ctl00_ContentPlaceHolder1_shimingtext" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
-                                <li class="c">提现密码：<span id="ctl00_ContentPlaceHolder1_classtixian" class="color_ju">已设置</span><a href="/user/awalpassword/" id="ctl00_ContentPlaceHolder1_lintixian" class="btn fezicms Mleft20 color_tiann" style="padding:2px 11px;margin-left: 10px;">修改</a></li>
+                            <ul class="aul" style="margin-top:30px;">
+                                <!-- <li>安全手机：<span>已绑定</span><button class="btn" id="js-phone">修改</a></li>
+                                <li class="a">安全邮箱：<span>已绑定</span><button class="btn" id="js-email">修改</a></li> -->
+                                <li class="b">实名认证：<span>已认证</span><button class="btn" id="js-realName">修改</a></li>
+                                <li class="c">提现密码：<span>已设置</span><button class="btn" id="js-password">修改</a></li>
                             </ul>
                         </dd>
                     </dl>
@@ -52,8 +52,8 @@
                     <dl>
                         <dt>
                             <div class="Ti change">
-                                <span class="abbr fl" style="font-size: 33px;color:#333">555.00元</span>
-                               <button style="float: left;margin-top:3px;margin-left: 14px;padding:10px 14px;" class="btn"><i class="fa fa-money"></i>提 现</button>
+                                <span class="abbr fl" style="font-size: 33px;color:#333">￥<?=$_SESSION['user']['money']?></span>
+                               <button style="float: left;margin-top:3px;margin-left: 14px;padding:10px 14px;" class="btn" id="js-withdrawals"><i class="fa fa-money"></i>提 现</button>
                             </div>
                             <div id="ctl00_ContentPlaceHolder1_Span1" class="Bz changea" style="font-size: 14px;margin-top: 4px;">今日总订单数量：0 笔</div>
                         </dt>
@@ -169,5 +169,18 @@
         </tbody></table>
 
 	</div>
+    
+    <script type="text/dom">
+        var withdrawals = <div class="withdrawals">
+            <input type="text" placeholder="请输入申请提现的金额"/>
+            <input type="password" placeholder="请输入您的提现密码"/>
+            <select name="">
+                <option value="-1">请选择要提现的银行卡</option>
+                <option value=""></option>
+            </select>
+        </div>
+    </script>
+    <?php $this->load->view(HOME_TEMPLATE . '/template/footer');?>
+    <script type="text/javascript" src="./assets/js/home/home.js"></script>
 </body>
 </html>

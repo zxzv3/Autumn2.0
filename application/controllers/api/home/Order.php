@@ -5,24 +5,22 @@ class Order extends CI_Controller {
 	public function __construct(){
 		parent::__construct();
 		$this->name = __CLASS__;
-		
+		$this->load->model('User_model');
 
 		$this->params = array(
-
 			"{$this->name}/check:POST" => array(
-				'id' => array('max' => 10 , 'min' => 1 , 'name' => 'id'),
+				'id' => array('min' => 1 , 'max' => 16 , 'name' => '索引'),
 			),
-			"{$this->name}/remove:POST" => array(
-				'id' => array('max' => 10 , 'min' => 1 , 'name' => 'id'),
-			)
 		);
 	}
-    
+
 
 	public function _remap($method){
-		$this->params = Autumn::params("{$this->name}/{$method}" , 'api/admin' , $this->params);
+		if( ! Autumn::is_login()) return;
+		$this->params = Autumn::params("{$this->name}/{$method}" , 'api/home' , $this->params);
 		method_exists($this, $method) ? $this->$method() : show_404();
 	}
+
 
 
 	public function check(){
@@ -31,6 +29,7 @@ class Order extends CI_Controller {
 		if( ! $this->Order_model->is_exist(array('id' => $this->params->id))) Autumn::end(false , '您输入的订单不存在');
 
 		$Order_data = $this->Order_model->get(array('id' => $this->params->id));
+		if($Order_data['from_user'] != $_SESSION['user']['id']) Autumn::end(false , '这不是属于你的订单');
 		if($Order_data['type'] == 1) Autumn::end(false , '请勿重复通知');
 		
 		
@@ -59,13 +58,5 @@ class Order extends CI_Controller {
 		Autumn::end(true);
 	}
 
-
-	public function remove(){
-		$this->load->model('Order_model');
-
-		if( ! $this->Order_model->is_exist(array('id' => $this->params->id))) Autumn::end(false , '您输入的订单不存在');
-		$this->Order_model->remove(array('id' => $this->params->id));
-		Autumn::end(true);
-	}
 
 }

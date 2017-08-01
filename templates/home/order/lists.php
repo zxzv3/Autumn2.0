@@ -1,23 +1,16 @@
-	<style>
-		.edui-container{width: 100%}
-		th,td{
-		    padding: 18px 17px!important;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="./assets/css/home/page/home.css">
 </head>
 <body>
-	
-	<?php $this->load->view(ADMINDIR . '/template/menu.php')?>
-	<?php $this->load->view(ADMINDIR . '/template/top-header.php')?>
+	<?php $this->load->view(HOME_TEMPLATE . '/template/top-header')?>
+	<?php $this->load->view(HOME_TEMPLATE . '/template/menu')?>
 	<div class="warpper">
 		<table class="table-list">
 			<tr>
 				<th width="30"><div class="widget-checkbox"></div></th>
-				<th>商户ID</th>	 
 				<th>平台编号</th>	 
 				<th>商户编号</th>
 				<th>支付通道</th>	 
-				<th>费率</th>	 
+				<th>手续费</th>	 
 				<th>订单金额</th>	 
 				<th>入账金额</th>	 
 				<th>创建时间</th>	 
@@ -34,7 +27,6 @@
 			{Order_list}
 			<tr data-data='{data}'>
 				<td><div class="widget-checkbox"></div></td>
-				<td>{from_user}</td>
 				<td>{platform_order_id}</td>
 				<td>{merchant_order_id}</td>
 				<td><span class="label blue-o">{paytype}</span></td>
@@ -50,7 +42,6 @@
 				<td>{notice}</td>
 				<td>
 					<i class="fa fa-check" data-id="{id}"></i>
-					<i class="fa fa-trash-o" data-id="{id}"></i>
 				</td>
 			</tr>
 			{/Order_list}
@@ -60,24 +51,8 @@
 	
 	</div>
 
-	
-
-	<?php $this->load->view(ADMINDIR . '/template/footer.php')?>
-
-
-	<!-- load umeditor -->
-    <link href="./assets/bin/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
-    <script src="./assets/bin/umeditor/third-party/jquery.min.js"></script>
-    <script src="./assets/bin/umeditor/third-party/template.min.js"></script>
-    <script src="./assets/bin/umeditor/umeditor.config.js"></script>
-    <script src="./assets/bin/umeditor/umeditor.min.js"></script>
-    <script src="./assets/bin/umeditor/lang/zh-cn/zh-cn.js"></script>
-	<!-- load umeditor -->
-
+    <?php $this->load->view(HOME_TEMPLATE . '/template/footer');?>
 	<script type="text/javascript">
-		$(".fa-edit").click(function(){
-			window.location.href='./<?=ADMINDIR?>/article/edit?id=' + $(this).data('id')
-		});
 
 		$(".fa-check").click(function(event) {
 			var id = $(this).data('id');
@@ -89,18 +64,6 @@
 			})
 		});
 
-		$(".fa-trash-o").click(function(event) {
-			var id = $(this).data('id');
-			popup.sure({
-				title : '确认删除',
-				content : '您确定要删除这个订单吗？您确定要删除这个订单吗？您确定要删除这个订单吗？您确定要删除这个订单吗？',
-			}).then(function(){
-				ApiRequest.push('Order/Remove' , {params : {id : id}})
-			})
-		});
-
-
 	</script>
-
 </body>
 </html>

@@ -62,7 +62,6 @@
 		<div class="song">
 			<ul>
 				<li><a href="./<?=ADMINDIR?>/passageway/lists"><i class="fa fa-comments"></i> 通道列表</a></li>
-				<!-- <li><a href="./<?=ADMINDIR?>/notice/lists"><i class="fa fa-comments"></i> 通道设置</a></li> -->
 			</ul>
 		</div>
 	</div>
